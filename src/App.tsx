@@ -5,7 +5,7 @@ function App() {
   const [count, setCount] = useState(999);
   const [liked, setLiked] = useState(false);
 
-  const onClick = () => {
+  const handleClick = () => {
     if (liked) {
       setCount(count - 1);
       setLiked(false);
@@ -18,7 +18,7 @@ function App() {
   const className = (liked ? ["likeButton", "liked"] : ["likeButton"]).join(' ')
 
   return (
-    <span className={className} onClick={onClick}>♥ {count}</span>
+    <span className={className} onClick={handleClick}>♥ {count}</span>
   );
 }
 
