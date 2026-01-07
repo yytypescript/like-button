@@ -1,0 +1,30 @@
+.like {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 16px;
+  border-radius: 50px;
+  border: none;
+  background: #e91e63;
+  cursor: pointer;
+  color: #fff;
+  transition: transform 0.15s ease-in-out;
+}
+
+.like:focus {
+  outline: 2px solid #e91e63;
+  outline-offset: 2px;
+}
+
+.like:active {
+  transform: scale(1.15);
+}
+
+.like::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  background: #fff;
+  mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 14s-6-4-6-8a3 3 0 016 0 3 3 0 016 0c0 4-6 8-6 8z'/%3E%3C/svg%3E")
+    0 0 / contain;
+}
